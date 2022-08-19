@@ -4,7 +4,7 @@ const game = (props) => {
     const classes = props.className ? `${props.className} square` : 'square';
     return (
         <span className={classes}>
-            x
+            {props.state}
         </span>
     );
 };
