@@ -2,6 +2,9 @@ import './App.css';
 import '../src/components/style.css'
 import Game from '../src/components/Game'
 import { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const initialState = ['', '', '', '', '', '', '', '', ''];
 
 function App() {
@@ -21,7 +24,7 @@ function App() {
   useEffect(() => {
     const winner = checkWinner();
     if (winner) {
-      alert(`$(winner) has own the game`)
+      toast.success(`YAY..!${winner} has own the Game`)
       setGAmeState(initialState);
     }
   }, [gameState]);
@@ -64,6 +67,7 @@ function App() {
         <Game className="b-right" state={gameState[7]} onClick={() => clicked(7)} />
         <Game state={gameState[8]} onClick={() => clicked(8)} />
       </div>
+      <ToastContainer />
     </div>
   );
 }

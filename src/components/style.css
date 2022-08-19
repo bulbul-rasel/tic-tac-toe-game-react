@@ -14,7 +14,7 @@
     font-size: 42px;
     font-weight: bolder;
     text-align: center;
-    margin: 50px;
+    margin: 10px, 50px;
 }
 
 .square {
@@ -70,4 +70,9 @@
     color: red;
     width: max-content;
     margin: 40px auto 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1CDBF5;
+    font-size: 25px;
 }
