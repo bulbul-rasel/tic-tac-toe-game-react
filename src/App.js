@@ -19,8 +19,8 @@ function App() {
   }
   return (
     <div className="app-header">
-      <button>RESET GAME</button>
       <p className='heading-text'>TIC TAC TOE</p>
+      <button className='clear-button' onClick={() => setGAmeState(initialState)}>RESET GAME</button>
       <div className='row jc-center'>
         <Game className="b-bottom-right" state={gameState[0]} onClick={() => clicked(0)} />
         <Game className="b-bottom-right" state={gameState[1]} onClick={() => clicked(1)} />
