@@ -1,8 +1,9 @@
 import React from 'react';
 
-const game = () => {
+const game = (props) => {
+    const classes = props.className ? `${props.className} square` : 'square';
     return (
-        <span>
+        <span className={classes}>
             x
         </span>
     );
